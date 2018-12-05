@@ -1,6 +1,6 @@
 {
   "name": "nightwatch-vrt-reporter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Made to work with https://github.com/Crunch-io/nightwatch-vrt",
   "main": "./lib/index.js",
   "scripts": {
