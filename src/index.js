@@ -120,15 +120,6 @@ class CreateReport {
     return promise;
   }
 
-  removePreviousReport() {
-    const promise = new Promise((resolve, reject) => {
-      rimraf(`${this.options.output_folder}/${this.browserFileName}.html`, () => {
-        resolve();
-      })
-    })
-    return promise;
-  }
-
   moveBundle() {
     const promise = new Promise((resolve, reject) => {
       let styles = fse.copy(`${__dirname}/templates/styles.css`, `${this.options.output_folder}/styles.css`);
@@ -142,7 +133,6 @@ class CreateReport {
     const appPromise = new Promise ((resolve, reject) => {
       const diffFiles = this.walkSync(this.globals.visual_regression_settings.diff_screenshots_path, [])
       this.getDiffFiles(diffFiles)
-      .then(() => this.removePreviousReport(), (err) => {throw err})
       .then(() => this.createReport(), (err) => {throw err})
       .then(() => this.moveBundle(), (err) => {throw err})
       .then(() => resolve(), (err) => { throw err });
