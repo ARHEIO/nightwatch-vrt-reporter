@@ -1,7 +1,6 @@
 const fs = require('fs');
 const fse = require('fs-extra');
 const path = require('path');
-const rimraf = require('rimraf');
 
 /**
  * ADAM
@@ -10,7 +9,7 @@ const rimraf = require('rimraf');
  * If you forget this again I swear to god
  * https://medium.com/@the1mills/how-to-test-your-npm-module-without-publishing-it-every-5-minutes-1c4cb4b369be
  */
-class CreateReport {
+export class CreateReport {
 
   constructor(results, options) {
     this.results = results;

@@ -1,0 +1,46 @@
+body {
+  background-color: #FFFFFF;
+}
+.global-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 120px;
+}
+.diff-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 8px;
+  padding: 8px; 
+  background-color: #F3F4F5;
+  box-shadow: 2px 2px 2px 2px #8A939D;
+  transition: box-shadow ease 0.5s;
+}
+.diff-container img, .diff-container p {
+  max-width: 320px;
+  margin: 0px auto;
+}
+.diff-container:hover {
+  box-shadow: 4px 4px 4px 4px #8A939D;
+}
+
+button, .diff-container:hover {
+  cursor: pointer;
+}
+
+
+p {
+  margin: 8px 0 0;
+  font-family: Arial, Helvetica, sans-serif;
+  word-wrap: break-word;;
+}
+
+.page-top-banner {
+  background-color: #1064A3;
+  height: 184px;
+  margin-bottom: -160px;
+  padding: 0px -8px;
+  width: 100%;
+}
